@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 // Damn Vulnerable DeFi v4 (https://damnvulnerabledefi.xyz)
-pragma solidity =0.8.25;
+pragma solidity ^0.8.25;
 
 import {IERC3156FlashBorrower} from "@openzeppelin/contracts/interfaces/IERC3156FlashBorrower.sol";
 import {Owned} from "solmate/auth/Owned.sol";
-import {UnstoppableVault, ERC20} from "../unstoppable/UnstoppableVault.sol";
+import {UnstoppableVault, ERC20} from "./UnstoppableVault.sol";
 
 /**
  * @notice Permissioned contract for on-chain monitoring of the vault's flashloan feature.  
