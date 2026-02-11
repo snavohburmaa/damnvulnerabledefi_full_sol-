@@ -12,6 +12,8 @@ contract FlashLoanReceiver is IERC3156FlashBorrower {
         pool = _pool;
     }
 
+    // issue: access control, ignore the first addr -> ini flash loan
+    // anyone can req flash loan on behalf of this contract and make to pay the fee to the pool
     function onFlashLoan(address, address token, uint256 amount, uint256 fee, bytes calldata)
         external
         returns (bytes32)
